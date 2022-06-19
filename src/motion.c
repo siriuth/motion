@@ -1822,7 +1822,8 @@ static void mlp_resetimages(struct context *cnt)
 
 static int mlp_retry(struct context *cnt)
 {
-    int size_high, height, width;
+    //int size_high, height, width;
+    int size_high;
 
     if (cnt->video_dev < 0 && cnt->currenttime % 10 == 0 && cnt->shots == 0) {
         MOTION_LOG(WRN, TYPE_ALL, NO_ERRNO
