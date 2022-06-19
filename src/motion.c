@@ -1822,15 +1822,14 @@ static void mlp_resetimages(struct context *cnt)
 
 static int mlp_retry(struct context *cnt)
 {
-    //int size_high, height, width;
-    int size_high;
+    int size_high, height, width;
 
     if (cnt->video_dev < 0 && cnt->currenttime % 10 == 0 && cnt->shots == 0) {
         MOTION_LOG(WRN, TYPE_ALL, NO_ERRNO
             ,_("Retrying until successful connection with camera"));
 
-        //width = cnt->imgs.width;
-        //height  = cnt->imgs.height;
+        width = cnt->imgs.width;
+        height  = cnt->imgs.height;
 
         cnt->video_dev = vid_start(cnt);
         if (cnt->video_dev < 0) {
