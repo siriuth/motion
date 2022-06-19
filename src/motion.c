@@ -1829,8 +1829,8 @@ static int mlp_retry(struct context *cnt)
         MOTION_LOG(WRN, TYPE_ALL, NO_ERRNO
             ,_("Retrying until successful connection with camera"));
 
-        width = cnt->imgs.width;
-        height  = cnt->imgs.height;
+        //width = cnt->imgs.width;
+        //height  = cnt->imgs.height;
 
         cnt->video_dev = vid_start(cnt);
         if (cnt->video_dev < 0) {
