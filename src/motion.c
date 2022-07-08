@@ -1724,7 +1724,7 @@ static void mlp_prepare(struct context *cnt)
     //cnt->currenttime = time(NULL);
     clock_gettime(CLOCK_REALTIME, cnt->currenttime_ts);
     cnt->currenttime = cnt->currenttime_ts->tv_sec;
-    clock_gettime(CLOCK_REALTIME, cnt->currenttime_ts);
+    //clock_gettime(CLOCK_REALTIME, cnt->currenttime_ts);
     
     /*
      * localtime returns static data and is not threadsafe
